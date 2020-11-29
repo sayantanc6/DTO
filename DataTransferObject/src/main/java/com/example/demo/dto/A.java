@@ -15,7 +15,6 @@ public class A {
 	public A() {
 	}
 	
-	@Mapping("title")
 	public String getTitle() {
 		return title;
 	}
@@ -23,7 +22,6 @@ public class A {
 		this.title = title;
 	}
 	
-	@Mapping("strings")
 	public List<String> getStrings() {
 		return strings;
 	}

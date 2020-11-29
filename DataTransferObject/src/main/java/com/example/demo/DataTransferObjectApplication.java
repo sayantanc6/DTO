@@ -12,7 +12,7 @@ import com.example.demo.dto.MergeTwoObjects;
 
 @SpringBootApplication
 public class DataTransferObjectApplication{
-	
+	 
 	@Autowired
 	static ApplicationContext context;
 	
