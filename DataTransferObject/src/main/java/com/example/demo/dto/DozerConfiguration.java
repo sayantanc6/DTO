@@ -27,9 +27,7 @@ public class DozerConfiguration extends BeanMappingBuilder implements CustomConv
 	public Object convert(Object existingDestinationFieldValue, Object sourceFieldValue, Class<?> destinationClass,Class<?> sourceClass) {
 		if (sourceFieldValue != null && sourceFieldValue instanceof List<?> && List.class.equals(destinationClass)) {
 				currstrings = (List<String>)sourceFieldValue;
-				for (String item : currstrings) {
-					strings.add(item);
-				}
+				strings.addAll(currstrings);
 				return strings; 
 			}
 		return null;
