@@ -15,7 +15,6 @@ public class A2 {
 	public A2() {
 	}
 	
-	@Mapping("title")
 	public String getTitle() {
 		return title;
 	}
