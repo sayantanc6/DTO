@@ -10,6 +10,7 @@ public class A2 {
 
 	String title;
 	
+	@Mapping("strings")
 	List<String> strings;
 	
 	public A2() {
@@ -22,7 +23,6 @@ public class A2 {
 		this.title = title;
 	}
 	
-	@Mapping("strings")
 	public List<String> getStrings() {
 		return strings;
 	}
