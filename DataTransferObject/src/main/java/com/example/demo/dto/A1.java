@@ -8,14 +8,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class A1 {
 	
+	@Mapping("title")
 	String title;
 	
+	@Mapping("strings")
 	List<String> strings;
 	
 	public A1() {
 	}
 
-	@Mapping("title")
 	public String getTitle() {
 		return title;
 	}
@@ -24,7 +25,6 @@ public class A1 {
 		this.title = title;
 	}
 
-	@Mapping("strings")
 	public List<String> getStrings() {
 		return strings;
 	}
