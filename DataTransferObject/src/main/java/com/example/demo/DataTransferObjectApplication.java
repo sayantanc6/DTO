@@ -7,15 +7,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.stereotype.Component;
 
-import com.example.demo.arrdto.AppConfig2;
-import com.example.demo.arrdto.ArrCopy;
-import com.example.demo.dto.AppConfig;
-import com.example.demo.dto.MergeTwoObjects;
+import com.example.demo.nesteddto.AppConfig3;
+import com.example.demo.nesteddto.NestedMapping;
 
 @SpringBootApplication
-@ComponentScan
+@ComponentScan("nesteddto.*")
 public class DataTransferObjectApplication{
 	 
 	@Autowired
@@ -23,12 +20,14 @@ public class DataTransferObjectApplication{
 	
 	public static void main(String[] args) {
 		SpringApplication.run(DataTransferObjectApplication.class, args);
-		context = new AnnotationConfigApplicationContext(AppConfig2.class); 
+		context = new AnnotationConfigApplicationContext(AppConfig3.class);  
 		try {
 //			MergeTwoObjects mObjects = context.getBean(MergeTwoObjects.class);
 //			mObjects.merge();
-			ArrCopy  copy = context.getBean(ArrCopy.class);
-			copy.copy();
+//			ArrCopy  copy = context.getBean(ArrCopy.class);
+//			copy.copy();
+			NestedMapping  mapping = context.getBean(NestedMapping.class);
+			mapping.nestedmap();
 		} catch (BeansException e) {
 			e.printStackTrace();
 		}
